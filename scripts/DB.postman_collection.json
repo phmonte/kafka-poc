@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "253159e5-bc05-49ce-be4d-cffc0a3723ca",
+		"name": "DB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.168.0.73:8083/connectors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\" : \"sqlserver-person-connector1\",\r\n \"config\" : {\r\n    \"connector.class\":\"io.debezium.connector.sqlserver.SqlServerConnector\",\r\n    \"database.hostname\" : \"192.168.0.73\",\r\n    \"database.port\": \"1433\",\r\n    \"database.user\" : \"sa\",\r\n    \"database.password\" : \"123Aa321\",\r\n    \"database.dbname\" : \"TesteEF\",\r\n    \"database.server.name\" : \"dbserver1\",\r\n    \"table.whitelist\" : \"dbo.Person\",\r\n    \"database.history.kafka.bootstrap.servers\" : \"192.168.0.73:9092\",\r\n    \"database.history.kafka.topic\" : \"dbhistory.person\",\r\n    \"name\" : \"sqlserver-person-connector1\"\r\n }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.0.73:8083/connectors",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"73"
+					],
+					"port": "8083",
+					"path": [
+						"connectors"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
